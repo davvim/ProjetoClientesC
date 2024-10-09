@@ -8,7 +8,6 @@ void removerElemento(Cliente clientes[], int maxClientes, int posicao) {
     }
 }
 
-
 void deletarCliente(Cliente clientes[], int maxClientes) {
     int codigoCliente;
 
@@ -16,12 +15,19 @@ void deletarCliente(Cliente clientes[], int maxClientes) {
     scanf("%d", &codigoCliente);
 
     for(int i = 0; i < maxClientes; i++) {
+        
         if(clientes[i].codigoCliente == codigoCliente) {
+            
+            if (clientes[i]._contadorDeDocumentos){
+                printf("O cliente com documentos cadastrados nao pode ser deletado.\n");
+                return;
+            }
+
             removerElemento(clientes, maxClientes, i);
-            printf("Cliente de código %d deletado com sucesso.\n", codigoCliente);
+            printf("Cliente de codigo %d deletado com sucesso.\n", codigoCliente);
             return;
         }
     }
-    printf("Cliente de código %d não encontrado.\n", codigoCliente);
+    printf("Cliente de codigo %d nao encontrado.\n", codigoCliente);
 }
 

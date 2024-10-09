@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <string.h> 
 #include "menu/menu.h"
 #include "crud/criarCliente.h"
 #include "crud/criarDocumento.h"
@@ -12,13 +13,12 @@
 #define MAX_CLIENTES 15
 #define MAX_DOCUMENTOS 30
 
-// Cliente cliente1 = {1, "João da Silva", "1234-5678", "Rua das Flores, 123"};
-// Documento documento1 = {1, 1, {2024, 1, 1}, {2024, 1, 10}, 100.0, 0.1};
 
 int main() {
     int escolha, posicaoCliente = 0;
     Cliente clientes[MAX_CLIENTES];
-    
+
+    memset(clientes, 0, sizeof(clientes));
     setlocale(LC_ALL, "Portuguese");
 
     do {
@@ -27,7 +27,7 @@ int main() {
         
         switch (escolha) {
             case 1:
-                criarCliente(&posicaoCliente, clientes);
+                criarCliente(&posicaoCliente, clientes, MAX_CLIENTES);
                 break;
             case 2:
                 cadastrarDocumento(clientes, MAX_CLIENTES);
@@ -44,7 +44,7 @@ int main() {
             case 6:
                 break;
             default:
-                printf("Escolha inválida. Tente novamente.\n");
+                printf("Escolha invalida. Tente novamente.\n");
         }
     } while (escolha != 6);
 

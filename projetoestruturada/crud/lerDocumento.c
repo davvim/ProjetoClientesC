@@ -17,8 +17,8 @@ void lerDocumento(Cliente clientes[], int maxClientes, int maxDocumentos){
         return;
     }
 
-    printf("Documento de número: %d\n", documento.numeroDocumento);
-    printf("Documento associado ao cliente de código: %d\n", documento.codigoCliente);
+    printf("Documento de numero: %d\n", documento.numeroDocumento);
+    printf("Documento associado ao cliente de codigo: %d\n", documento.codigoCliente);
     printf("Data de vencimento: %d/%d/%d\n", documento.dataVencimento.dia, documento.dataVencimento.mes, documento.dataVencimento.ano);
     printf("Data de pagamento: %d/%d/%d\n", documento.dataPagamento.dia, documento.dataPagamento.mes, documento.dataPagamento.ano);
     printf("Valor do documento: R$%.2f\n", documento.valor);
@@ -34,5 +34,5 @@ void documentosPorCliente(Cliente clientes[], int maxClientes){
     }
 
     Cliente cliente = clientes[posicao];
-    printf("O cliente de código %d possui %d documentos cadastrados.\n", cliente.codigoCliente, cliente._contadorDeDocumentos);
+    printf("O cliente de codigo %d possui %d documentos cadastrados.\n", cliente.codigoCliente, cliente._contadorDeDocumentos);
 }

@@ -1,26 +1,34 @@
 #include <stdio.h>
 #include "../esquemas/esquemas.h"
+#include "utils.h"
 
 
-Cliente criarCliente(int *posicaoCliente, Cliente clientes[]) {
+Cliente criarCliente(int *posicaoCliente, Cliente clientes[], int tamanhoVetor) {
     Cliente cliente;
 
-    printf("Digite o codigo do cliente: ");
-    scanf("%d", &cliente.codigoCliente);
+
+    while (1) {
+        printf("Digite o codigo do cliente: ");
+        scanf("%d", &cliente.codigoCliente);
+
+        if (validarIdCliente(cliente.codigoCliente, clientes, tamanhoVetor))
+            break;
+
+        printf("Codigo do cliente ja existe. Por favor escolha outro\n");
+    }
+
 
     printf("Digite o nome do cliente: ");
-    scanf("%s", cliente.nome);
+    scanf(" %[^\n]s", cliente.nome);
     
     printf("Digite o telefone do cliente: ");
-    scanf("%s", cliente.telefone);
+    scanf(" %[^\n]s", cliente.telefone);
     
     printf("Digite o endereco do cliente: ");
-    scanf("%s", cliente.endereco);
+    scanf(" %[^\n]s", cliente.endereco);
 
     cliente._contadorDeDocumentos = 0;
     clientes[*posicaoCliente] = cliente;
-    *posicaoCliente++;
+    (*posicaoCliente)++; 
     return cliente;
 }
-
-
