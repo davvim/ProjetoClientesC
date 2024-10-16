@@ -1,0 +1,62 @@
+{
+	"clientes":	[{
+			"codigoCliente":	1,
+			"nome":	"Cliente 1",
+			"telefone":	"123456789",
+			"endereco":	"Rua Exemplo",
+			"_contadorDeDocumentos":	2,
+			"documentos":	[{
+					"numeroDocumento":	101,
+					"codigoCliente":	1,
+					"dataVencimento":	{
+						"ano":	2024,
+						"mes":	10,
+						"dia":	15
+					},
+					"dataPagamento":	{
+						"ano":	2024,
+						"mes":	10,
+						"dia":	14
+					},
+					"valor":	100,
+					"valorJuros":	5
+				}, {
+					"numeroDocumento":	0,
+					"codigoCliente":	0,
+					"dataVencimento":	{
+						"ano":	0,
+						"mes":	0,
+						"dia":	0
+					},
+					"dataPagamento":	{
+						"ano":	0,
+						"mes":	0,
+						"dia":	0
+					},
+					"valor":	0,
+					"valorJuros":	0
+				}]
+		}, {
+			"codigoCliente":	2,
+			"nome":	"Lucas",
+			"telefone":	"123",
+			"endereco":	"av lal",
+			"_contadorDeDocumentos":	1,
+			"documentos":	[{
+					"numeroDocumento":	1,
+					"codigoCliente":	2,
+					"dataVencimento":	{
+						"ano":	2024,
+						"mes":	1,
+						"dia":	1
+					},
+					"dataPagamento":	{
+						"ano":	2024,
+						"mes":	2,
+						"dia":	1
+					},
+					"valor": 500,
+					"valorJuros":	0
+				}]
+		}]
+}
