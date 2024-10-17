@@ -1,0 +1,26 @@
+{
+	"clientes":	[{
+			"codigoCliente":	1,
+			"nome":	"Lucas de Medeiros",
+			"telefone":	"123456",
+			"endereco":	"Av ...",
+			"_contadorDeDocumentos":	1,
+			"documentos":	[{
+					"numeroDocumento":	1,
+					"codigoCliente":	1,
+					"dataVencimento":	{
+						"ano":	2010,
+						"mes":	10,
+						"dia":	10
+					},
+					"dataPagamento":	{
+						"ano":	2010,
+						"mes":	10,
+						"dia":	11
+					},
+					"valor":	100,
+					"valorJuros":	5
+				}]
+		}
+    ]
+}

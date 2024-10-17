@@ -20,7 +20,7 @@
 int main() {
     int escolha, posicaoCliente = 0;
     Cliente clientes[MAX_CLIENTES];
-    char filename[20] = "exemplo.json";
+    char filename[20] = "clientes.json";
 
     memset(clientes, 0, sizeof(clientes));
     setlocale(LC_ALL, "Portuguese");
